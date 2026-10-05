@@ -1,0 +1,32 @@
+{
+    "version": "0.4.0",
+    "description": "A tiny native API inspection tool: send a request, read the JSON. Also a command-line client and an MCP server.",
+    "homepage": "https://metamug.com/util/plunger/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/metamug/plunger/releases/download/v0.4.0/plunger-windows.zip",
+            "hash": "04e5b8f49ff4b7563f99f7ec40887722bcf66aa03a2612cc7492b677cc5a19df"
+        }
+    },
+    "bin": "plunger.exe",
+    "shortcuts": [
+        [
+            "plunger.exe",
+            "Plunger"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/metamug/plunger"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/metamug/plunger/releases/download/v$version/plunger-windows.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
